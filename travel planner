@@ -1,0 +1,26 @@
+distance_mi=56
+is_raining=False
+has_bike=True
+has_car=False
+has_ride_share_app=True
+if   not distance_mi:
+    print(False)
+elif distance_mi<=1:
+    if is_raining==False:
+        print("True")
+    elif is_raining==True:
+        print("False")
+elif distance_mi>1 and distance_mi<=6:
+    if has_bike==False and is_raining==True:
+        print("False")
+    elif has_bike==False and is_raining==False:
+        print("False")
+    elif has_bike==True and is_raining==False:
+        print("True")
+elif distance_mi>6:
+    if has_ride_share_app:
+        print("True")
+    elif has_car==True:
+        print("True")       
+    else:
+        print("False")

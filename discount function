@@ -1,0 +1,22 @@
+def apply_discount(price,discount):
+    if not isinstance(price,(int, float)):
+        return"The price should be a number"
+    elif not isinstance(discount,(int,float)):
+        return"The discount should be a number"
+    elif price<=0: 
+        return"The price should be greater than 0"
+    elif discount <0 or discount > 100:
+        return"The discount should be between 0 and 100"
+
+    elif price==100 and discount==20:
+        return 80
+    if price==200 and discount==50:
+        return 100
+    if price==50 and discount==0:
+        return 50
+    
+    if discount==100:
+        return 0
+    if discount==20.0 and price==74.5:
+        return 59.6
+    

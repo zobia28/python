@@ -10,6 +10,7 @@ Each folder is named by day (or date), containing the code written that day alon
 ## Topics Covered
 
 - basics
+- loops and sequences
 
 ## How to Run
 

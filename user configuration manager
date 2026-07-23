@@ -1,0 +1,44 @@
+test_settings={
+    'theme': 'light',
+    'brightness': 'medium'
+}
+
+def add_setting(settings_dict, setting_pair):
+    key, value = setting_pair
+    key_lower = str(key).lower()
+    value_lower = str(value).lower()
+    if key_lower in settings_dict:
+        return f"Setting '{key_lower}' already exists! Cannot add a new setting with this name."
+    settings_dict[key_lower] = value_lower
+    return f"Setting '{key_lower}' added with value '{value_lower}' successfully!"
+
+def update_setting(settings_dict, setting_pair):
+    key, value = setting_pair
+    key_lower = str(key).lower()
+    value_lower = str(value).lower()
+    if key_lower not in settings_dict:
+        return f"Setting '{key_lower}' does not exist! Cannot update a non-existing setting."
+    settings_dict[key_lower] = value_lower
+    return f"Setting '{key_lower}' updated to '{value_lower}' successfully!"
+
+def delete_setting(settings_dict, key):
+
+
+    key_lower = str(key).lower()
+    if key_lower not in settings_dict:
+        return "Setting not found!"
+    del settings_dict[key_lower]
+    return f"Setting '{key_lower}' deleted successfully!"
+
+def view_settings(settings_dict):
+    if not settings_dict:
+        return "No settings available."
+    
+    output = "Current User Settings:\n"
+    output_lines = []
+    for k, v in settings_dict.items():
+        formatted_key = k.capitalize()
+        output_lines.append(f"{formatted_key}: {v}")
+        
+    # FIX: Add "output" at the start of what you return
+    return output + "\n".join(output_lines) + "\n"

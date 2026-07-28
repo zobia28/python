@@ -13,6 +13,8 @@ Each folder is named by day (or date), containing the code written that day alon
 - loops and sequences
 - dictonaries and sets
 - error handling
+- classes and objects
+- 
 
 ## How to Run
 

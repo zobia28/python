@@ -14,7 +14,8 @@ Each folder is named by day (or date), containing the code written that day alon
 - dictonaries and sets
 - error handling
 - classes and objects
-- 
+- object oriented programming
+- linear data types
 
 ## How to Run
 

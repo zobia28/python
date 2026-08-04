@@ -16,6 +16,7 @@ Each folder is named by day (or date), containing the code written that day alon
 - classes and objects
 - object oriented programming
 - linear data types
+- algorithm
 
 ## How to Run
 

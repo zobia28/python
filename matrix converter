@@ -1,0 +1,18 @@
+def adjacency_list_to_matrix(adj_list):
+    # Determine the number of nodes from the adjacency list
+    num_nodes = len(adj_list)
+    
+    # Create an N x N matrix initialized with zeros
+    matrix = [[0] * num_nodes for _ in range(num_nodes)]
+    
+    # Fill in 1 for each existing edge
+    for node, neighbors in adj_list.items():
+        for neighbor in neighbors:
+            matrix[node][neighbor] = 1
+            
+    # Print each row of the matrix
+    for row in matrix:
+        print(row)
+        
+    # Return the matrix
+    return matrix

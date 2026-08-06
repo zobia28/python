@@ -1,0 +1,29 @@
+def hanoi_solver(n):
+    # Initialize the 3 rods
+    # Rod A (index 0) gets all disks from largest (n) down to smallest (1)
+    # Rod B (index 1) and Rod C (index 2) start empty
+    rods = [list(range(n, 0, -1)), [], []]
+    
+    # Store snapshot of the initial state
+    history = [f"{rods[0]} {rods[1]} {rods[2]}"]
+
+    def move_disks(disks_to_move, source, target, auxiliary):
+        if disks_to_move > 0:
+            # 1. Move n-1 disks from source to auxiliary
+            move_disks(disks_to_move - 1, source, auxiliary, target)
+
+            # 2. Move the largest disk from source to target
+            disk = rods[source].pop()
+            rods[target].append(disk)
+            
+            # Record state after this move
+            history.append(f"{rods[0]} {rods[1]} {rods[2]}")
+
+            # 3. Move the n-1 disks from auxiliary to target
+            move_disks(disks_to_move - 1, auxiliary, target, source)
+
+    # Solve by moving n disks from Rod 0 to Rod 2 using Rod 1 as auxiliary
+    move_disks(n, 0, 2, 1)
+
+    # Return all recorded steps joined by newline
+    return "\n".join(history)

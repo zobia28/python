@@ -1,0 +1,18 @@
+def adjacency_list_to_matrix(adj_list):
+    # Determine the total number of nodes in the graph
+    n = len(adj_list)
+    
+    # Initialize an n x n matrix with zeros
+    matrix = [[0] * n for _ in range(n)]
+    
+    # Populate the matrix with 1s where edges exist
+    for node, neighbors in adj_list.items():
+        for neighbor in neighbors:
+            matrix[node][neighbor] = 1
+            
+    # Print each row of the matrix as required
+    for row in matrix:
+        print(row)
+        
+    # Return the completed adjacency matrix
+    return matrix

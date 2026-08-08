@@ -1,0 +1,30 @@
+def dfs_n_queens(n):
+    # Edge case: If n is less than 1, return an empty list
+    if n < 1:
+        return []
+
+    solutions = []
+
+    def backtrack(row, current_state, cols, diag1, diag2):
+        # Base case: All queens have been placed successfully
+        if row == n:
+            solutions.append(current_state)
+            return
+
+        for col in range(n):
+            # Check if placing a queen at (row, col) causes a collision
+            if col in cols or (row - col) in diag1 or (row + col) in diag2:
+                continue
+
+            # Place queen and recurse to the next row (DFS step)
+            backtrack(
+                row + 1,
+                current_state + [col],
+                cols | {col},
+                diag1 | {row - col},
+                diag2 | {row + col}
+            )
+
+    # Start search from row 0 with empty state sets
+    backtrack(0, [], set(), set(), set())
+    return solutions

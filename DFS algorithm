@@ -1,0 +1,18 @@
+def dfs(matrix, start_node):
+    stack = [start_node]
+    visited = []
+    while stack:
+        # Pop the last added node from the stack
+        current = stack.pop()
+        
+        # If the node hasn't been visited yet
+        if current not in visited:
+            visited.append(current)
+            
+            # Find all neighboring nodes connected to current
+            # Check in reverse or forward order to add unvisited neighbors to stack
+            for neighbor in range(len(matrix[current])):
+                if matrix[current][neighbor] == 1 and neighbor not in visited:
+                    stack.append(neighbor)
+                    
+    return visited

@@ -1,0 +1,7 @@
+a = True
+b = True
+c = False
+
+result = (a or b) and not c
+
+print(f"result = {result}")

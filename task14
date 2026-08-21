@@ -1,0 +1,16 @@
+level = int(input())
+has_training = input() == "True" 
+level_message = "None" 
+
+if level >=1 and level <=5:
+    level_message = "Basic weapons only"
+elif (level>=6 and level<=10) and not has_training :
+    level_message = 'Need weapon training first'
+elif (level>=6 and level<=10) and  has_training :
+    level_message = 'Access to advanced weapons granted'
+elif level >=11:
+    level_message = 'Access to all weapons granted'
+elif level <=0:
+    level_message = 'Invalid level'
+
+print(level_message)

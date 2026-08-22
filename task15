@@ -1,0 +1,3 @@
+x=int(input())
+y = 120 - x
+print(y,"years till 120")

@@ -1,0 +1,10 @@
+x= int(input())
+y= int(input())
+for i in range(x,y):
+    if i > 5:
+        print(f"First even number greater than 5: {i}")
+        break
+for i in range(x,y):
+    if i%7==0:
+        print(f"First number divisible by 7: {i}")
+        break

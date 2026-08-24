@@ -1,0 +1,38 @@
+# Task 1: Numbers divisible by 4 between 30-80
+print("Numbers divisible by 4 between 30-80:")
+# Your code here
+for i in range(30,81):
+    if i%4==0:
+        print(i,end=", ")
+print()  # Creates a new line for better readability
+
+# Task 2: First 8 odd numbers from 15
+print("\nFirst 8 odd numbers from 15:")
+# Your code here
+count = 0
+n = 15
+while count < 8:
+    if n % 2 == 1:
+        print(n, end=", ") 
+        count += 1
+    n += 1
+print()  # Creates a new line for better readability
+
+# Task 3: Counting backwards, divisible by 5
+print("\nCounting backwards, divisible by 5:")
+# Your code here
+for u in range(50,9,-1):
+    if u%5 == 0:
+         print(u,end=", ")
+
+print()  # Creates a new line for better readability
+
+# Task 4: Product of numbers divisible by 3
+print("\nProduct of numbers divisible by 3 (1-30):")
+# Your code here
+product = 1
+for b in range(1,31):
+    if b%3==0:
+        product *= b
+print(product)
+# Remember: print only the number, not "Product = number"

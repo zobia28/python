@@ -1,0 +1,7 @@
+def combine_and_filter(lst, threshold):
+    filtered = []
+    for i in range(0, len(lst)):
+        if lst[i] > threshold:
+            filtered.append(lst[i])
+    filtered.sort()
+    return filtered

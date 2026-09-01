@@ -1,0 +1,5 @@
+def sum_elements(lst):
+    total = 0
+    for i in range(len(lst)):
+        total += lst[i]
+    print(total)

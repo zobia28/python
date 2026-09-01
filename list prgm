@@ -1,0 +1,5 @@
+def values(lst):
+    # Write code here
+    for i in range(len(lst)):
+        item = lst[i]
+        print(item)

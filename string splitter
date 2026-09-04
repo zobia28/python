@@ -1,0 +1,5 @@
+text = input()
+delimiter = input()
+res = text.split()
+res = delimiter.join(res)
+print(res)

@@ -1,0 +1,12 @@
+def not_mutual_friends(list1, list2):
+    not_mutual = []
+    
+    for friend in list1:
+        if friend not in list2:
+            not_mutual.append(friend)
+            
+    for friend in list2:
+        if friend not in list1:
+            not_mutual.append(friend)
+            
+    return not_mutual

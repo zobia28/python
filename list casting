@@ -1,0 +1,11 @@
+tuple_data = (10, 20, 30)
+tuple_to_list = list(tuple_data)
+print(tuple_to_list)  # [10, 20, 30]
+
+string_data = "python"
+string_to_list = list(string_data)
+print(string_to_list)  # ['p', 'y', 't', 'h', 'o', 'n']
+
+range_data = range(1, 6)
+range_to_list = list(range_data)
+print(range_to_list)  # [1, 2, 3, 4, 5]

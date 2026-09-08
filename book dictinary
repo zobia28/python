@@ -1,0 +1,11 @@
+def create_book_dict(title, author, year):
+    # Create an empty dictionary
+    book_dict = {}
+
+    # Add key-value pairs to the dictionary
+    book_dict["title"] = title
+    book_dict["author"] = author
+    book_dict["year"] = year
+
+    # Return the dictionary
+    return book_dict

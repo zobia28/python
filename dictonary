@@ -1,0 +1,16 @@
+grades = {
+    "Alice": 85,
+    "Bob": 90,
+    "Charlie": 78
+}
+
+print("Students:", grades.keys())
+print("Grades:", grades.values())
+
+grades["Diana"] = 92
+
+bobs_grade = grades.get("Bob")
+print("Bob's grade:", bobs_grade)
+
+grades.pop("Charlie")
+print("Updated grades:", grades)

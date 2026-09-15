@@ -1,0 +1,5 @@
+def check_inventory(inventory, item):
+    if item in inventory:
+        return f"{item} is in stock. Quantity: {inventory[item]}"
+    else:
+        return f"{item} is not in stock."

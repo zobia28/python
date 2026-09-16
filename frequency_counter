@@ -1,0 +1,10 @@
+def frequency_counter(data_list):
+    frequency_dict = {}
+
+    for item in data_list:
+        if item in frequency_dict:
+            frequency_dict[item] += 1
+        else:
+            frequency_dict[item] = 1
+
+    return frequency_dict

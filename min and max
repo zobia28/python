@@ -1,0 +1,13 @@
+numbers = [42, 17, 23, 56, 9, 34]
+words = ["kiwi", "apple", "banana", "cherry", "date"]
+
+smallest_number = min(numbers)
+largest_number = max(numbers)
+
+smallest_word = min(words)
+largest_word = max(words)
+
+print("Smallest number:", smallest_number)
+print("Largest number:", largest_number)
+print("Smallest word:", smallest_word)
+print("Largest word:", largest_word)

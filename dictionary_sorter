@@ -1,0 +1,8 @@
+def dictionary_sorter(data_dict):
+    sorted_items = sorted(data_dict.items(), key=lambda item: item[1])
+
+    sorted_dict = {}
+    for key, value in sorted_items:
+        sorted_dict[key] = value
+
+    return sorted_dict

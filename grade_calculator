@@ -1,0 +1,20 @@
+def analyze_grades(grades):
+    average = sum(grades.values()) / len(grades)
+    
+    highest = max(grades.values())
+    lowest = min(grades.values())
+    
+    top_student = [name for name, grade in grades.items() if grade == highest][0]
+    bottom_student = [name for name, grade in grades.items() if grade == lowest][0]
+    
+    return {
+        'average': round(average, 2),
+        'highest': highest,
+        'lowest': lowest,
+        'top_student': top_student,
+        'bottom_student': bottom_student
+    }
+
+student_grades = {'Alice': 85, 'Bob': 92, 'Charlie': 78, 'David': 95, 'Eve': 88}
+result = analyze_grades(student_grades)
+print(result)

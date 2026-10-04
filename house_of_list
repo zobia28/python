@@ -1,0 +1,4 @@
+def house_of_lists(list_of_lists):
+    filtered_lists = [lst for lst in list_of_lists if sum(lst) <= 50]
+    extracted_numbers = [num for lst in filtered_lists for num in lst if num < 5]
+    return extracted_numbers

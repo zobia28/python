@@ -1,0 +1,30 @@
+def handle_shopping_cart(orders):
+    cart = {}
+    
+    for order in orders:
+        try:
+            if ":" not in order:
+                print(f"Invalid format: {order}")
+                continue
+                
+            item = order.split(":")[0]
+            quantity_str = order.split(":")[1]
+            
+            quantity = int(quantity_str)
+            
+            if quantity < 0:
+                print(f"Negative quantity not allowed: {order}")
+                continue
+                
+            if item in cart:
+                cart[item] += quantity
+            else:
+                cart[item] = quantity
+                
+        except ValueError:
+            print(f"Invalid quantity: {order}")
+            
+        except Exception as e:
+            print(f"Unexpected error: {e}")
+            
+    return cart

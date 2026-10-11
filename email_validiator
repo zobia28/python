@@ -1,0 +1,17 @@
+def clean_email_list(emails):
+    cleaned_emails = map(lambda email: email.strip().lower(), emails)
+    
+    def is_valid_email(email):
+        if email.count('@') != 1:
+            return False
+        
+        local, domain = email.split('@')
+        
+        if not local or not domain or ' ' in email:
+            return False
+            
+        return True
+    
+    valid_emails = filter(is_valid_email, cleaned_emails)
+    
+    return list(valid_emails)

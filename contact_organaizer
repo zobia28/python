@@ -1,0 +1,32 @@
+def organize_contacts(contact_list):
+
+    def is_valid_email(email):
+        return '@' in email and '.' in email and ' ' not in email
+
+    def clean_phone(phone):
+        digits = ''.join(filter(str.isdigit, phone))
+        return digits if len(digits) == 10 else None
+
+    cleaned_contacts = []
+    seen_emails = set()
+    seen_phones = set()
+
+    for contact in contact_list:
+        cleaned_email = contact['email'].lower()
+        cleaned_phone = clean_phone(contact['phone'])
+
+        if not is_valid_email(cleaned_email) or cleaned_phone is None:
+            continue
+
+        if cleaned_email in seen_emails or cleaned_phone in seen_phones:
+            continue
+
+        seen_emails.add(cleaned_email)
+        seen_phones.add(cleaned_phone)
+        cleaned_contacts.append({
+            'name': contact['name'],
+            'email': cleaned_email,
+            'phone': cleaned_phone
+        })
+
+    return cleaned_contacts
